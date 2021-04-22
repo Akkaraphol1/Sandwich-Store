@@ -436,8 +436,14 @@ B[1].addActionListener(new ActionListener(){
 
 B[0].addActionListener(new ActionListener(){
 	public void actionPerformed(ActionEvent arg0) {
+		if(Tx[1].getText().equals("")){
+		Nr[13] = 0;
+		}
+		else {
+			Nr[13] = Double.parseDouble((Tx[1].getText()));
+		}
 		
-		Nr[13] = Double.parseDouble((Tx[1].getText()));
+		
 		 	
 		Pay = -Total + Nr[13] ;
 		Pay2 = String.format("%.2f", Pay);
